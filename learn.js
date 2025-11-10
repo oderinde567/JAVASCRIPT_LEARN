@@ -217,7 +217,69 @@ indexof (searchvale, startposition)
 Returns the fist index of the specified value, or -1 ir not found.
 */
 
-let text = 'Hello World, Welcome to the World';
-console.log(text.indexOf("World"));
+// let text = 'Hello World, Welcome to the World';
+// console.log(text.indexOf("World"));
 
 
+/*
+        *-> Extracting parts
+        slice (start, end)
+        Extracts a section of a string (end not included).
+*/
+
+// Managing featured products images
+// const productImages = ['img1.jpg', 'img2.jpg', 'img3.jpg', 'img4.jpg', 'img5.jpg', 'img6.jpg',];
+
+// Show Only first 3 images in main gallery, rest in thumbnail view.
+
+// const mainGalleryImages = productImages.slice(0, 3);
+// console.log(mainGalleryImages);
+// const thumbnailImages = productImages.slice(3); // will display all images from img4 to img6.
+// console.log(thumbnailImages);
+
+// *** API DEVELOPMENT - Request Processing
+
+// * Processing File Uploads
+// Extracting file extension from uploaded
+// const uploadedFile = 'quarterly-report.pdf';
+// const fileExtension = uploadedFile.slice(uploadedFile.lastIndexOf('.' ) + 1);
+// console.log(fileExtension);
+
+// const uploadedFile = 'quarterly-report.html';
+// const fileExtension = uploadedFile.slice(uploadedFile.lastIndexOf('.' ) + 1);
+// console.log(fileExtension);
+
+// ** Email & Notificatiion Systems
+// Email Domain Extraction
+// const email = "femi@company.com";
+// const domain = email.slice(email.indexOf('@') + 1);
+// console.log(domain);
+
+// const username = email.slice(0, email.indexOf('@'));
+// console.log(username);
+
+
+/*
+* -> substring(start, end)
+similar to slice, but doesn't accept negative indexes.
+*/
+
+// const creditCard = "4111111111111111";
+// const maskedCard = creditCard.substring(0, 4) + "********" + 
+// creditCard.substring(12);
+// console.log(maskedCard);
+
+
+// ** URL Slug Generation
+const blogTitle = "How to Build Scalable Backend Systems in 2025";
+const slug = blogTitle.substring(0, 47).toLowerCase().replace(/ /g, "-"); // to lower case
+// const slug = blogTitle.substring(0, 47).toUpperCase().replace(/ /g, "-"); // to upper case
+// console.log(blogTitle.length); // to count the number of characters
+console.log(slug);
+
+
+// ***** Array -> JAVASCRIPT
+// ? what is an Array?
+/*
+An array is a data structure that store multiple values in a single values variable. Arrays can hold any type of data: numbers, strings, objects, even other arrays.
+*/
