@@ -117,11 +117,107 @@ they hold single values (not collections) and are immutable --meani ng you can't
 // * **** STRING
 
 // used for text
-let name = "Ibraheem";
-let message = 'Hello';
-let phrase = `My name is ${name}`; // template literal
+// let name = "Ibraheem";
+// let message = 'Hello';
+// let phrase = `My name is ${name}`; // template literal
 
 // strings are immutable -- you can't change characters directly:
 
 //let str = "hi";
 // str
+
+
+// Number
+
+//represent all numeric values (integers, decimals etc.)
+
+// let age = 25;
+// console.log(age)
+// let price = 99.99;
+// console.log(price)
+
+// javascript doesn't have separate types for integers and floats - just number.
+
+/*
+Boolean
+Represent true or false
+*/
+// let isOnline = true;
+// console.log(isOnline)
+// let isAdmin = false;
+// console.log(isAdmin)
+
+/*
+            * -> Object (reference) data types
+
+ * -> Obkects are collections of key-value pairs or complex sructures
+ * ->They are mutBle and stored by refernce, not by value.
+*/
+
+// * Object
+
+// const user = {
+//     name: "Ahmahd",
+//     age:28,
+//     isPresident:true
+// }     
+
+
+// console.log(user.name, user.age, user.isPresident) // to dispaly them one by one
+// console.log(user) // to display all at once
+
+// * Array
+// An ordered collection (list)of value
+
+// const fruits = ["Apple", "Banana", "Orange", 90, true]
+// console.log(fruits[2]) // to call one 
+
+//!   De-structuring
+// console.log(fruits.slice(-2));
+// const [, e, , y, t] = fruits;
+// console.log(e, y)
+
+
+
+// * ***** STRING PROPERTIES
+
+// Length
+// Returns the number of characters in sting.
+
+// let text = "Hello  World";
+// console.log(text.length);
+
+// let greet = "Hello World";
+// console.log(greet.length);
+
+//** String Methods
+//* Accessing Characters
+
+// Returns the character at a specified index.
+
+// let prLanguage = "JavaScript"
+// console.log(prLanguage.charAt(0));
+// console.log(prLanguage.charAt(1));
+// console.log(prLanguage.charAt(2));
+// console.log(prLanguage.charAt(3));
+// console.log(prLanguage.charAt(4));
+
+
+
+//** Extracting part
+// slice(start, end)
+// Extract a section of string (end not included).
+
+// let sentence = "how are you doing?";
+// console.log(sentence.slice(0,5))
+// console.log(sentence.slice(5));
+
+/*searching & finding
+indexof (searchvale, startposition)
+Returns the fist index of the specified value, or -1 ir not found.
+*/
+
+let text = 'Hello World, Welcome to the World';
+console.log(text.indexOf("World"));
+
+
