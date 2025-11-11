@@ -271,11 +271,11 @@ similar to slice, but doesn't accept negative indexes.
 
 
 // ** URL Slug Generation
-const blogTitle = "How to Build Scalable Backend Systems in 2025";
-const slug = blogTitle.substring(0, 47).toLowerCase().replace(/ /g, "-"); // to lower case
+// const blogTitle = "How to Build Scalable Backend Systems in 2025";
+// const slug = blogTitle.substring(0, 47).toLowerCase().replace(/ /g, "-"); // to lower case
 // const slug = blogTitle.substring(0, 47).toUpperCase().replace(/ /g, "-"); // to upper case
 // console.log(blogTitle.length); // to count the number of characters
-console.log(slug);
+// console.log(slug);
 
 
 // ***** Array -> JAVASCRIPT
@@ -283,3 +283,77 @@ console.log(slug);
 /*
 An array is a data structure that store multiple values in a single values variable. Arrays can hold any type of data: numbers, strings, objects, even other arrays.
 */
+
+
+// * Creating Arrays
+
+// const fruits = ['apple', 'banana', 'orange'];
+// const numbers = [1, 2, 3, 4, 5];
+// const mixed = [1, 'hello', true, null, {name: 'john'}];
+// const empty = [];
+
+// Array Properties
+
+//length.
+//Return the number of elements in an array.
+
+// const colors = ['red', 'green', 'blue'];
+// console.log(colors.length);
+
+
+
+// * -> Array Methods
+// Adding/Removing Elements
+// const animals = ['cat', 'dog'];
+// animals.push('bird'); // this is used to add more files
+// console.log(animals);
+// File upload Tracking
+//? Tracking uploaded files
+// const uploadedFiles = [
+//         {filename: 'document.pdf', size: '2.5MB'},
+//         {filename: 'image.jpg', size: '1.8MB'}
+// ];
+
+// const newFile = {filename: 'video.mp4', size: '15.2MB'};
+
+// uploadedFiles.push(newFile);
+// console.log(uploadedFiles);
+
+
+// Add multiple elements
+// animals.push('fish', 'hamster');
+// console.log(animals);
+
+
+// pop()- Remove the last element
+// const fruits = ['apple', 'banana', 'orange'];
+// const removed = fruits.pop();
+// console.log(removed);
+// console.log(fruits);
+
+
+// Unshift - Add elements to the beginning.
+// const numbers = [2, 3, 4];
+// numbers.unshift(1);
+// console.log(numbers);
+// numbers.unshift(-1, 0);
+// console.log(numbers);
+
+// shift() - Removes the first element.
+// const colors = ['red', 'green', 'blue'];
+// const removed = colors.shift();
+// console.log(colors);
+
+// ** Searching Elements
+// indexOf() - Finds the index of an element
+// ! User Authentication Check
+// Checking if user is in blocked list
+// const blockedUsers = ['user123', 'spammer456', 'bot789'];
+// const loginAttempt = 'user123';
+// const isBlocked = blockedUsers.indexOf(loginAttempt);
+// console.log(isBlocked);
+
+// includes() - checks if an element exists
+const pets = ['cat', 'dog', 'bird'];
+// console.log(pets.includes('dog'));
+console.log(pets.includes('rat'));
