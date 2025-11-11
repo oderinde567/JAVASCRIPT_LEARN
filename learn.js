@@ -354,6 +354,56 @@ An array is a data structure that store multiple values in a single values varia
 // console.log(isBlocked);
 
 // includes() - checks if an element exists
+// const pets = ['cat', 'dog', 'bird'];
+// console.log(pets.includes('dog')); // prints true
+// console.log(pets.includes('rat'));    // prints false
+
+
+// includes() - checks if an elements exists.
 const pets = ['cat', 'dog', 'bird'];
-// console.log(pets.includes('dog'));
-console.log(pets.includes('rat'));
+const found = pets.find(num => num === 'dog');
+// console.log(found);
+
+
+// find() - Returns the first elements tha matches a condition.
+// const numbers = [5, 12, 8, 130, 44];
+// const found = numbers.find(num=> num > 10);
+// console.log(found);
+
+const users =[
+        [101, "layla@mail.com", 'active'],
+        [102, "john@mail.com",  'inactive'],
+        [103, "mike@email.com", 'active'],
+];
+
+
+//! looking for the user
+// const foundUser = users.find(user => user [0] === 102)
+const foundUser = users.filter(user => user[2] === 'active');
+// console.log(foundUser);
+
+/*
+        Transforming Arrays
+map() - Creates a new array by transforming each element
+*/
+
+const numbers = [1, 2, 3, 4];
+// const doubled = numbers.map(num => num * 2);
+const names = ['Thakzin', 'Ibnu', 'Tauzee', 'Ashiwaju', 'Ahmeedi'];
+const uppercase = names.map(name => name.toUpperCase());
+// console.log(uppercase);
+// console.log(doubled);
+
+
+// * slice() - Extracts a portion of an array (doesn't modify original)
+
+// ** Server Load Distribution
+const servers = [
+    ['web01', 'primary', '80%'],
+    ['web02', 'primary', '75%'],
+    ['web03', 'secondary', '60%'],
+    ['web04', 'secondary', '55%'],
+    ['web05', 'backup', '10%']
+];
+const secondaryServers = servers.slice(2,4);
+console.log(secondaryServers);
