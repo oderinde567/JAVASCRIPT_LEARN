@@ -473,14 +473,14 @@ const uppercase = names.map(name => name.toUpperCase());
 // console.log(person);
 
 // ** Nested Objects
-let person = {
-        name: "Ahmed Ashiwaju",
-        address: {
-                city: "Abuja",
-                zip: 100270,
-        },
-        hobbies: ["Campaign", "Indiffernt"]
-};
+// let person = {
+//         name: "Ahmed Ashiwaju",
+//         address: {
+//                 city: "Abuja",
+//                 zip: 100270,
+//         },
+//         hobbies: ["Campaign", "Indiffernt"]
+// };
 
 // console.log(person.address.city);
 // console.log(person.hobbies[0]);
@@ -551,3 +551,90 @@ let person = {
 // console.log(batteryLevel);
 
 // console.log("Battery fully charged!");
+
+
+// *** do...while Loop
+// RUns at least once, then, checks the condition.
+//the do...while loop is special because it gurantees the code runs at least once, then continues as long as the condtion remains true.
+// let i = 0;
+// do{
+//         console.log(i);
+//         i++;
+// } while(i < 5);
+
+
+
+// *** password Length Checker
+// let passwords = ["123", "pass", "mysecurepass123", "abc",];
+// let index = 0;
+// let validpassword = "";
+
+// do{
+//         let currentpassword = passwords[index];
+//         console.log(`Checking password: ${currentpassword}`);
+
+//         if(currentpassword.length >= 8){
+//                 validpassword = currentpassword;
+//                 console.log(`valid password found: ${validpassword}`);
+//         } else{
+//                 console.log(`Too short! Minimm 8 characters required.`);
+//         }
+//         index++;
+// } while(index < passwords.length && validpassword === "");
+
+
+// *** ATM withdrawal validator
+let balance = 1000;
+let withdrawAmount = 1500;
+let attempts = 0;
+
+do{
+    attempts++;
+    console.log(`Attempt ${attempts}: Trying to withdraw $${withdrawAmount}`);
+    if(withdrawAmount <= balance){
+        balance -= withdrawAmount;
+        console.log(`success! withdrew $${withdrawAmount}.New balance: $${balance}`);
+        break;
+    }else{
+      console.log(`insufficient funds. Balance: $${balance}`);
+      withdrawAmount -= 200; //Reduce withdraawal amount.
+    }
+}while (withdrawAmount > 0)
+
+
+
+
+// *** for...of loop (ES6)
+//  used to loop through arrays, strings, map, sets, etc.
+
+const fruits = ["apple", "banana", "orange"];
+for(const fruit of fruits){
+    console.log(fruits);
+}
+
+
+//  *** Email spam filter.
+
+let emails = [
+    "helo@compaany.com",
+    "spam@lottery.com",
+    "friend@email.com",
+    "winner@fake.com",
+    "boss@work.com",
+];
+
+let spamkeywords = ["spam", "lottery", "winner", "fake"];
+for (let email of emails){
+    let isSpam = false;
+    for(let keyword of spamkeywords){
+        if(`email.includes(keywords)`){
+            isSpam = true;
+            break;
+        }
+    }
+
+    if(isSpam){
+        console.log(`❌ SPAM: ${email}`);
+    }else{ console.log(`✔ INBOX: ${email}`)
+    }
+}
