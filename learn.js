@@ -398,12 +398,156 @@ const uppercase = names.map(name => name.toUpperCase());
 // * slice() - Extracts a portion of an array (doesn't modify original)
 
 // ** Server Load Distribution
-const servers = [
-    ['web01', 'primary', '80%'],
-    ['web02', 'primary', '75%'],
-    ['web03', 'secondary', '60%'],
-    ['web04', 'secondary', '55%'],
-    ['web05', 'backup', '10%']
-];
-const secondaryServers = servers.slice(2,4);
-console.log(secondaryServers);
+// const servers = [
+//     ['web01', 'primary', '80%'],
+//     ['web02', 'primary', '75%'],
+//     ['web03', 'secondary', '60%'],
+//     ['web04', 'secondary', '55%'],
+//     ['web05', 'backup', '10%']
+// ];
+// const secondaryServers = servers.slice(2,4);
+// console.log(secondaryServers);
+
+// ** -> splice() - Adds/removes elements (modifies original)
+
+/*
+        The splice() method changes the  contents of an array by:
+
+        * -> removing 
+        * -> replacing, or 
+        * -> adding elements at specific positions. 
+        
+        It modifies the original array (unlinnk sice() which returns a new one).
+ */
+
+// Removing an item from a shopping cart.
+
+// let cart = ['Shirt', 'Trouser', 'Shoes', 'Watch',];
+// cart.splice(1, 2);
+// console.log(cart);
+
+// Adding a new item to the middle of a list.
+
+// const playlist = ['Song A', 'Song B', 'Song D',];
+// playlist.splice(2, 1, 'Song C');
+// console.log(playlist);
+
+// Managing a To-Do List
+// let tasks = ['wake up', 'brush', 'exercise', 'breakfast'];
+// tasks.splice(1, 1, 'Shower');
+// console.log(tasks);
+
+
+// **** JAVASCRIPT OBJECT
+
+// An object is data stucture that stores information in keyvalues pairs.
+// Each key (also called a property) is like a label, and the value is the data stored under that label.
+
+// let person = {
+//         name: "Femi",
+//         age: 25,
+//         course: "Computer Science",
+//         job: "Backend Engineer",
+//         tel: "08144979938",
+//         "First name": "Femi"
+// };
+
+// Accessing Object Values
+// There are two main wyas to access an object's value.
+// console.log(person.name);
+// console.log(person.tel);
+
+// * Bracket notation
+// console.log(person["job"]);
+// console.log(person["First name"]);
+
+// Adding and updating properties
+// you can ass new properties or update existing ones easily.
+
+// person.country = "Nigeraia";
+// person.age = 26;
+// console.log(person);
+
+// Deleting properties.
+// delete person.course;
+// console.log(person);
+
+// ** Nested Objects
+let person = {
+        name: "Ahmed Ashiwaju",
+        address: {
+                city: "Abuja",
+                zip: 100270,
+        },
+        hobbies: ["Campaign", "Indiffernt"]
+};
+
+// console.log(person.address.city);
+// console.log(person.hobbies[0]);
+// console.log(person.hobbies[1]);
+// console.log(person.hobbies.indexOf("Campaign"));
+
+/*
+        * *** -> LOOP 
+        A loop lets you repeat a block code multiple times - automatically.
+                Types of Loopd in Javascript
+        Loop Type (for, while, do...while, for....of, for....in)
+
+        for -> When you know how many times to repeat.
+        while -> When you don't know the exact count, but have a condition
+        do...while -> Similar to while, but runs at least once. 
+        for...of -> To loop throught arrays or strings
+        for...in -> To loop through object properties
+*/
+
+        // for(let i =1; i < 5; i++){
+        //         console.log(i);
+        // }
+
+        // const dirtyDishes = ["plate", "bowl", "cup", "fork", "spoon"];
+
+        // for(let i = 0; i < dirtyDishes.length; i++){
+        //         console.log(`washing: ${dirtyDishes[i]}`);
+        //         console.log(`${dirtyDishes[i]} is now clean`);
+        // }
+
+// * Grocery Shopping (Working with Lists)
+// Checking items off your shopping list
+// const shoppingList = ["milk", "eggs", "bread", "cheese",]
+// const cart = [];
+
+// for (let i = 0; i < shoppingList.length; i++){
+//         console.log(`Added ${shoppingList[i]} to cart`)
+//         cart.push(shoppingList[i]);
+// }
+// console.log("Cart contains:", cart);
+
+// ** while loop
+// Runs as long as the condition is true.
+// let i = 0;
+// while(i < 5){
+//         console.log(i);
+//         i++;
+// }
+
+
+// ** charging your phone
+// monitoing battery level hile charging
+
+// let batteryLevel = 15; // starting with low battery
+// const chargingRate = 8; // % per iteration
+
+// console.log("phone charging started ...");
+// while(batteryLevel < 100){
+//         batteryLevel += chargingRate;
+
+//         if(batteryLevel > 100) batteryLevel = 100;
+//         console.log(`Battery: ${batteryLevel}%`);
+
+//         if(batteryLevel >= 80){
+//         console.log("Almost full! Fast charging slowing down...");
+//    }
+// }
+// console.log(batteryLevel);
+
+// console.log("Battery fully charged!");
