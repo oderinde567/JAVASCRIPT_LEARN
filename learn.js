@@ -1,6 +1,3 @@
-
-
-
 // console.log("Hello, good morning.");
 // *variables -> VAR LET CONST
 
@@ -95,7 +92,7 @@ Const is used to declare block-scoped variables that cannot be reassigned or red
 
 /*
 
-            * -> WHAT ARE DATA TYPES?
+         * -> WHAT ARE DATA TYPES?
 
 Data types define the kind of value a variable can hold - like numbers, text or objects. 
 
@@ -203,7 +200,6 @@ Represent true or false
 // console.log(prLanguage.charAt(4));
 
 
-
 //** Extracting part
 // slice(start, end)
 // Extract a section of string (end not included).
@@ -284,7 +280,6 @@ similar to slice, but doesn't accept negative indexes.
 An array is a data structure that store multiple values in a single values variable. Arrays can hold any type of data: numbers, strings, objects, even other arrays.
 */
 
-
 // * Creating Arrays
 
 // const fruits = ['apple', 'banana', 'orange'];
@@ -299,7 +294,6 @@ An array is a data structure that store multiple values in a single values varia
 
 // const colors = ['red', 'green', 'blue'];
 // console.log(colors.length);
-
 
 
 // * -> Array Methods
@@ -563,7 +557,6 @@ const uppercase = names.map(name => name.toUpperCase());
 // } while(i < 5);
 
 
-
 // *** password Length Checker
 // let passwords = ["123", "pass", "mysecurepass123", "abc",];
 // let index = 0;
@@ -584,57 +577,213 @@ const uppercase = names.map(name => name.toUpperCase());
 
 
 // *** ATM withdrawal validator
-let balance = 1000;
-let withdrawAmount = 1500;
-let attempts = 0;
+// let balance = 1000;
+// let withdrawAmount = 1500;
+// let attempts = 0;
 
-do{
-    attempts++;
-    console.log(`Attempt ${attempts}: Trying to withdraw $${withdrawAmount}`);
-    if(withdrawAmount <= balance){
-        balance -= withdrawAmount;
-        console.log(`success! withdrew $${withdrawAmount}.New balance: $${balance}`);
-        break;
-    }else{
-      console.log(`insufficient funds. Balance: $${balance}`);
-      withdrawAmount -= 200; //Reduce withdraawal amount.
-    }
-}while (withdrawAmount > 0)
-
-
+// do{
+//     attempts++;
+//     console.log(`Attempt ${attempts}: Trying to withdraw $${withdrawAmount}`);
+//     if(withdrawAmount <= balance){
+//         balance -= withdrawAmount;
+//         console.log(`success! withdrew $${withdrawAmount}.New balance: $${balance}`);
+//         break;
+//     }else{
+//       console.log(`insufficient funds. Balance: $${balance}`);
+//       withdrawAmount -= 200; //Reduce withdraawal amount.
+//     }
+// }while (withdrawAmount > 0)
 
 
 // *** for...of loop (ES6)
 //  used to loop through arrays, strings, map, sets, etc.
 
-const fruits = ["apple", "banana", "orange"];
-for(const fruit of fruits){
-    console.log(fruits);
-}
+// const fruits = ["apple", "banana", "orange"];
+// for(const fruit of fruits){
+//     console.log(fruits);
+// }
 
 
 //  *** Email spam filter.
 
-let emails = [
-    "helo@compaany.com",
-    "spam@lottery.com",
-    "friend@email.com",
-    "winner@fake.com",
-    "boss@work.com",
-];
+// let emails = [
+//     "helo@compaany.com",
+//     "spam@lottery.com",
+//     "friend@email.com",
+//     "winner@fake.com",
+//     "boss@work.com",
+// ];
 
-let spamkeywords = ["spam", "lottery", "winner", "fake"];
-for (let email of emails){
-    let isSpam = false;
-    for(let keyword of spamkeywords){
-        if(`email.includes(keywords)`){
-            isSpam = true;
-            break;
-        }
-    }
+// let spamkeywords = ["spam", "lottery", "winner", "fake"];
+// for (let email of emails){
+//     let isSpam = false;
+//     for(let keyword of spamkeywords){
+//         if(`email.includes(keywords)`){
+//             isSpam = true;
+//             break;
+//         }
+//     }
 
-    if(isSpam){
-        console.log(`❌ SPAM: ${email}`);
-    }else{ console.log(`✔ INBOX: ${email}`)
-    }
+//     if(isSpam){
+//         console.log(`❌ SPAM: ${email}`);
+//     }else{ console.log(`✔ INBOX: ${email}`)
+//     }
+// }
+
+
+// ** ConditionalStatements
+// Conditional statement check conditions (true/fals expressions) and decide
+
+// In javascript, the main conditional statements are:
+/*
+
+        *`if`
+        *`if...else`
+        *`else if`
+        *`switch`
+        *`Ternary operator`? :`
+        * Optional chaining + nullish coalescing (modern JS).
+*/
+
+// if statement
+// Runs a bloxk only if the condition is true.
+
+// let age = 20;
+// if(age >= 18){
+//         console.log("you are an adult");
+// }
+
+// if ...else statement
+// if the condition is true -> run block A
+// Else -> run block B
+
+// let age = 15;
+// if(age >= 18){
+//         console.log("Adult");
+// } 
+// else{
+//         console.log("Minor");
+// }
+
+// else if statement
+// * used when you need check multiple conditions.
+
+let score = 75;
+if(score >= 90){
+        console.log("A");
+} else if (score >= 70){
+        console.log("B")
+} else if(score >= 50){
+        console.log("C")
+} else{
+        console.log("Fail");
 }
+
+
+// ** Switch Statement
+// used when you are checking one value against many cases/
+// cleaner than many else if statements.
+
+let day = 3;
+switch(day){
+    case 1:
+        console.log("Monday");
+        break;
+    case 2:
+        console.log("Tuesday");
+        break;
+    case 3:
+        console.log("Wednesday");
+        break;
+    default:
+        console.log("Invalid day");
+}
+
+// * Ternary Operator `? :`.
+// Short form and `if...else` 
+// Good for simple decisions.
+
+let age = 18;
+
+let message = age >= 18 ? "Adult" : "Minor";
+// not ?is if and : is else
+console.log(message);
+
+
+// *** Function in javascript.
+// a function is reusable block of code that performs a specific task
+// you write function once, and use it many times.
+
+// why use functions?
+
+/*
+        * -> reduce code repetition.
+        * -> organize code into readable parts.
+        * -> make code reusable.
+        * -> make programs cleaner.
+*/
+
+// **  Basic FUnction Structure
+
+/*
+        *******************
+        function greet(){
+        console.log("Hello!");
+        }
+        *******************
+*/
+
+
+// * `function` -> keyword. 
+// * `greet` -> function name. 
+// * `()` -> parameters area. 
+// * `{}` -> function body.
+ 
+
+/*
+        To run the function:
+        ***********
+        greet()// outputs: Hello!
+        ***********
+*/
+
+// * Funtion Parameters & Arguments
+// Parameters -> placeholders inside the funtion
+// Arguments -> actual values you pass
+
+/*
+        **********************
+        function greet (name){
+             console.log("Hello" + name);
+        }
+
+        greet("Ibraheen"); // argument:"Ibraheem"
+        **********************
+*/
+
+
+// Return Statement.
+// A functon can return a value.
+
+/*
+        ******************
+        function add(){
+                return a + b;
+        }
+        console.log(add(5, 3)); // 8
+        *********************
+        once `return` runs, the fuction stops execution.
+*/
+
+//  Default parameters
+/* 
+        *********************
+        function greet(name = "Guest"){
+                console.log("Hello" + name);
+        }
+        greet(); // Hello Guest
+        greet("Sam"); // Hello sam
+        **********************
+*/
+
+
