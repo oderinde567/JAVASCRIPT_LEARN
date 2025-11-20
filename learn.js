@@ -707,7 +707,7 @@ let age = 18;
 
 let message = age >= 18 ? "Adult" : "Minor";
 // not ?is if and : is else
-console.log(message);
+// console.log(message);
 
 
 // *** Function in javascript.
@@ -725,13 +725,14 @@ console.log(message);
 
 // **  Basic FUnction Structure
 
-/*
-        *******************
+
         function greet(){
         console.log("Hello!");
         }
-        *******************
-*/
+
+        greet();
+
+
 
 
 // * `function` -> keyword. 
@@ -755,8 +756,9 @@ console.log(message);
         **********************
         function greet (name){
              console.log("Hello" + name);
+             console.log("Hello"+" "+ name);
         }
-
+    
         greet("Ibraheen"); // argument:"Ibraheem"
         **********************
 */
@@ -774,7 +776,11 @@ console.log(message);
         *********************
         once `return` runs, the fuction stops execution.
 */
-
+function returnName(){
+        return .098*678;
+        // return "Ib'nu";
+}
+// console.log(returnName());
 //  Default parameters
 /* 
         *********************
@@ -786,4 +792,80 @@ console.log(message);
         **********************
 */
 
+// * Function Declaration
 
+// function functionName(parameters){
+//         return Value;
+// }
+
+// Function Expressions
+// A function stored in a variable
+// const greet = function(){
+//         console.log("Hi");
+// }
+// greet();
+
+const multiply = function(a, b){
+        return a * b;
+}
+console.log(multiply(5, 3)); // 15
+
+
+
+// * Arrow Functions(ES6+)
+
+const functionName = (parameters) => {
+        // function body.
+        return Value;
+};
+
+// single parameter (parenthesis optional)
+const square = x => x * x;
+
+// No parameters
+const sayHello = () => "Hello";
+
+// Implicit return
+const add = (a, b) => a+b;
+
+// --- CALLING THEM ---
+console.log(square(5));
+console.log(sayHello());
+
+console.log(add(10, 20));
+
+
+//using Math.pow()
+let result2 = Math.pow(5, 2);
+console.log(result2); // 25
+
+// Immediately Invoked FUnction Expressions (IIFE)
+(function(){
+
+})();
+
+// or with arrow function
+(() => {
+        // code  here
+});
+
+// ** Examples
+(function(){
+        const add = (a, b) => a + b;
+        const result = add(5, 7);
+        console.log("The sum is : ", result);
+})();
+
+(() => {
+        const square = x => x * x;
+        const value = square(6);
+        console.log("The square is:", value);
+})();
+
+
+// ***  SOLUTION
+
+function removeDuplicates(array){
+ return [...new Set(array)];
+}
+console.log(removeDuplicates([1,2,2,3,4,4,5,6,6,6,7,7,8,]));
