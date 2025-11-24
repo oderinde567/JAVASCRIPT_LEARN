@@ -850,22 +850,90 @@ console.log(result2); // 25
 });
 
 // ** Examples
-(function(){
-        const add = (a, b) => a + b;
-        const result = add(5, 7);
-        console.log("The sum is : ", result);
-})();
+// (function(){
+//         const add = (a, b) => a + b;
+//         const result = add(5, 7);
+//         console.log("The sum is : ", result);
+// })();
 
-(() => {
-        const square = x => x * x;
-        const value = square(6);
-        console.log("The square is:", value);
-})();
+// (() => {
+//         const square = x => x * x;
+//         const value = square(6);
+//         console.log("The square is:", value);
+// })();
 
 
 // ***  SOLUTION
 
-function removeDuplicates(array){
- return [...new Set(array)];
+// function removeDuplicates(array){
+//  return [...new Set(array)];
+// }
+// console.log(removeDuplicates([1,2,2,3,4,4,5,6,6,6,7,7,8,]));
+
+
+// ? Write a function redundant that takes in a string str and returns a function that returns str
+
+function redundant(str){
+        return function(){
+                return str;
+        }
 }
-console.log(removeDuplicates([1,2,2,3,4,4,5,6,6,6,7,7,8,]));
+ const f1 = redundant("apple");
+
+//  console.log(f1());
+
+
+ // *** Create a function that takes a number as an argument, increase the number by +1 and returns the result.
+
+ function addition(num){
+        return num + 1;
+
+ }
+//  console.log(addition(0));
+
+//*******************************
+ function addition(num){        
+        return num + 1;
+       
+ }
+
+ //*******************************
+ function addition(num){
+        return num + 1;
+        
+ }
+//  console.log(addition(-3));
+
+
+// **** Object Oriented Programming in JavaScript
+// **** Creating Object
+
+
+const person = {
+        name: "john",
+        age: 30,
+
+        // * Method
+        greet: function(){
+                return `hello, my name is ${this.name}`;
+        }
+}
+console.log(person.name);
+console.log(person.greet());
+
+
+// **** B4 Es6
+function Person(name, age){
+        this.name = name;
+        this.age = age;
+
+        this.greet = function(){
+                return `hello, my name is ${this.name}`;
+        }
+}
+
+// Creating instance
+const person1 = new Person('john', 30);
+const person2 = new Person('jane', 25);
+
+console.log(person1.greet());
