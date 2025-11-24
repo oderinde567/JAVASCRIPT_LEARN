@@ -175,7 +175,6 @@ Represent true or false
 // console.log(e, y)
 
 
-
 // * ***** STRING PROPERTIES
 
 // Length
@@ -726,11 +725,11 @@ let message = age >= 18 ? "Adult" : "Minor";
 // **  Basic FUnction Structure
 
 
-        function greet(){
-        console.log("Hello!");
-        }
+        // function greet(){
+        // console.log("Hello!");
+        // }
 
-        greet();
+        // greet();
 
 
 
@@ -808,8 +807,7 @@ function returnName(){
 const multiply = function(a, b){
         return a * b;
 }
-console.log(multiply(5, 3)); // 15
-
+// console.log(multiply(5, 3)); // 15
 
 
 // * Arrow Functions(ES6+)
@@ -829,15 +827,15 @@ const sayHello = () => "Hello";
 const add = (a, b) => a+b;
 
 // --- CALLING THEM ---
-console.log(square(5));
-console.log(sayHello());
+// console.log(square(5));
+// console.log(sayHello());
 
-console.log(add(10, 20));
+// console.log(add(10, 20));
 
 
 //using Math.pow()
 let result2 = Math.pow(5, 2);
-console.log(result2); // 25
+// console.log(result2); // 25
 
 // Immediately Invoked FUnction Expressions (IIFE)
 (function(){
@@ -918,22 +916,54 @@ const person = {
                 return `hello, my name is ${this.name}`;
         }
 }
-console.log(person.name);
-console.log(person.greet());
+// console.log(person.name);
+// console.log(person.greet());
 
 
 // **** B4 Es6
+//! By convention, constructor functions are named starting with an uppercase letter. Its purpose is to initializ new `person` objects.
 function Person(name, age){
+
+        // ! the `this` keyword inside the constructor refers to that newly created object.
         this.name = name;
         this.age = age;
 
+        // * Method
         this.greet = function(){
-                return `hello, my name is ${this.name}`;
+                return `Hello, my name is ${this.name}`;
         }
 }
 
 // Creating instance
-const person1 = new Person('john', 30);
-const person2 = new Person('jane', 25);
+const person1 = new Person('John', 30);
+const person2 = new Person('Jane', 25);
 
 console.log(person1.greet());
+console.log(person2.greet());
+
+
+//*** Arrya Properties
+
+function Libery(name, books){
+        this.name = name;
+        this.books = books || [];
+
+        this.addBook = function(book){
+                this.books.push(book);
+        };
+}
+
+const lib = new Libery("City Library", ["Math", "English"]);
+lib.addBook("Physics");
+
+console.log(lib.books);
+
+
+
+
+
+
+
+
+
+
