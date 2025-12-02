@@ -990,11 +990,11 @@ class Person{
         }
 }
 
-const person = new Person("Femi", 29);
-console.log(person.greet());
-person.birthYear = 1996;
-console.log("New Age:", person.age);
-console.log(person.birthYear);
+// const person = new Person("Femi", 29);
+// console.log(person.greet());
+// person.birthYear = 1996;
+// console.log("New Age:", person.age);
+// console.log(person.birthYear);
 
 
 // * DOM =  Document Object Model
@@ -1008,7 +1008,7 @@ console.log(person.birthYear);
 
 // console.log(document.title);
 // console.log(document.body);
-const title = document.getElementById("tinubu");
+// const title = document.getElementById("tinubu");
 // console.log(title);
 
 
@@ -1019,52 +1019,52 @@ const title = document.getElementById("tinubu");
 
 //  getElementsByTagName
 
-const paragraphs = document.getElementsByTagName('p');
+// const paragraphs = document.getElementsByTagName('p');
 // console.log(paragraphs.length);
 
-// * Get all elements
-const allElements = document.getElementsByTagName("*");
+* Get all elements
+// const allElements = document.getElementsByTagName("*");
 // console.log(allElements);
 
-// * can be called on specific element
-const div = document.querySelector('div');
+* can be called on specific element
+// const div = document.querySelector('div');
 // const divParagraph = div.getElementsByTagName('p');
 // console.log(divParagraph.length);
 
 
 // *** querySelector (modern & Most Used)
 // Returns FIRST matching element or null
-const intro  = document.querySelector('.intro');
-const container  = document.querySelector('.container');
+// const intro  = document.querySelector('.intro');
+// const container  = document.querySelector('.container');
 // console.log(container)
-const firstItem  = document.querySelector('.item');
+// const firstItem  = document.querySelector('.item');
 // console.log(firstItem);
 
 
 // CSS selectors - very powerful!
-const activeItem  = document.querySelector('.item.active');
+// const activeItem  = document.querySelector('.item.active');
 // console.log(activeItem);
 // * Child selector
-const firstLi = document.querySelector('ul > li');
-const containerP = document.querySelector('.container > p');
+// const firstLi = document.querySelector('ul > li');
+// const containerP = document.querySelector('.container > p');
 // console.log(containerP);
 
 
 //  Pseudo-selectors
 
-const firstChild = document.querySelector('li:first-child');
-const lastChild = document.querySelector('li:last-child');
-const nthChild = document.querySelector('li:nth-child(2)');
+// const firstChild = document.querySelector('li:first-child');
+// const lastChild = document.querySelector('li:last-child');
+// const nthChild = document.querySelector('li:nth-child(2)');
 // console.log(nthChild);
 
 
 
 
 //  Inserting Elements (Advanced).
-const list  = document.getElementById('list');
-const item2  = document.getElementById('item2');
-const item1  = document.createElement('li');
-item1.textContent = "Thukzinnn";
+// const list  = document.getElementById('list');
+// const item2  = document.getElementById('item2');
+// const item1  = document.createElement('li');
+// item1.textContent = "Thukzinnn";
 // console.log(item1);
 // list.insertBefore(item1, item2);
 // list.insertBefore(item1, list.firstChild);
@@ -1095,8 +1095,29 @@ const btn = document.getElementById('btn');
 // btn.addEventListener('mouseout', (e) => console.log('mouse out'));
 // btn.addEventListener('mousemove', (e) => console.log('mouse moving'));
 
-const form = document.querySelector('form');
-form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        console.log("Form submitted")
+// const form = document.querySelector('form');
+// form.addEventListener('submit', (e) => {
+//         e.preventDefault();
+//         console.log("Form submitted")
+// });
+
+const box = document.getElementById("colorBox");
+box.addEventListener("mouseover", function(event){
+        // Log event properties.
+        // console.log("Event type: ", event.type);
+        // console.log("event.target:", event.target);
+        // console.log("event.currentTarget: ", event.currentTarget);
+
+
+// * coordinates of the mouse pointer relative to the browser's viewpoint (the visible part of the window)
+        
+console.log("clientX, clientY: ", event.clientX, event.clientY);
+
+// * coordinates of the muse pointer relative to the document/page(includes: scrolling).
+console.log("pageX, pageY:", event.pageX, event.pageY);
+
+// *
+
 });
+
+
