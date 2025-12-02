@@ -907,39 +907,38 @@ function redundant(str){
 // **** Creating Object
 
 
-const person = {
-        name: "john",
-        age: 30,
+// const person = {
+//         name: "john",
+//         age: 30,
 
-        // * Method
-        greet: function(){
-                return `hello, my name is ${this.name}`;
-        }
-}
+//         // * Method
+//         greet: function(){
+//                 return `hello, my name is ${this.name}`;
+//         }
+// }
 // console.log(person.name);
 // console.log(person.greet());
 
 
 // **** B4 Es6
 //! By convention, constructor functions are named starting with an uppercase letter. Its purpose is to initializ new `person` objects.
-function Person(name, age){
+// function Person(name, age){
 
         // ! the `this` keyword inside the constructor refers to that newly created object.
-        this.name = name;
-        this.age = age;
+//         this.name = name;
+//         this.age = age;
 
         // * Method
-        this.greet = function(){
-                return `Hello, my name is ${this.name}`;
-        }
-}
+//         this.greet = function(){
+//                 return `Hello, my name is ${this.name}`;
+//         }
+// }
 
 // Creating instance
-const person1 = new Person('John', 30);
-const person2 = new Person('Jane', 25);
-
-console.log(person1.greet());
-console.log(person2.greet());
+// const person1 = new Person('John', 30);
+// const person2 = new Person('Jane', 25);
+// console.log(person1.greet());
+// console.log(person2.greet());
 
 
 //*** Arrya Properties
@@ -956,14 +955,44 @@ function Libery(name, books){
 const lib = new Libery("City Library", ["Math", "English"]);
 lib.addBook("Physics");
 
-console.log(lib.books);
+// console.log(lib.books);
 
 
+// *** Object-Oriented Programming (OOP) in JavaScript
 
+/*
+  Object-Oriented Programming is a programming paradigm that organizes code around objects rather than functions and procedures.. Javascript supports OOP through prototype-based inheritance (rather than class-based inheritance found in language like Java or c++), though ES6 introduced class syntax that provides a more familiar structure
+*/
 
+// *** ES6 classes 
 
+class Person{
+        // The `constructor` Methood
+        // The `constructor` is a special function that runs automatically when you create an object.
+    constructor(name, age){
+        this.name = name;
+        this.age = age;
+    }
 
+    // Method
+    greet(){
+        return `Hello, my name is ${this.name}`;
+        }
 
+        // Getter
+        get birthYear(){
+                return new Date().getFullYear() - this.age;
+        }
 
+        // Setter
+        set birthYear(year){
+                return new Date().getFullYear() - this.age;
+        }
+}
 
+const person = new Person("Femi", 29);
+console.log(person.greet());
+person.birthYear = 1996;
+console.log("New Age:", person.age);
+console.log(person.birthYear);
 
