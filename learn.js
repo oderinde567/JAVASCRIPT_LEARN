@@ -911,7 +911,7 @@ function redundant(str){
 //         name: "john",
 //         age: 30,
 
-//         // * Method
+        // * Method
 //         greet: function(){
 //                 return `hello, my name is ${this.name}`;
 //         }
@@ -996,3 +996,101 @@ person.birthYear = 1996;
 console.log("New Age:", person.age);
 console.log(person.birthYear);
 
+
+// * DOM =  Document Object Model
+
+/*
+    * -> When the browser loads an HTML file, it converts it into a tree JavaScript objects.
+    * -> Each HTML tag becomes a node (usually an  `Element` node).
+    * -> Text inside tags becomes text nodes.
+    * -> The root of this tree is the `document` object.
+*/
+
+// console.log(document.title);
+// console.log(document.body);
+const title = document.getElementById("tinubu");
+// console.log(title);
+
+
+// * getElementsByClassName
+// const boxes = document.getElementsByClassName('special');
+// console.log(boxes.length);
+// console.log(boxes[0]);
+
+//  getElementsByTagName
+
+const paragraphs = document.getElementsByTagName('p');
+// console.log(paragraphs.length);
+
+// * Get all elements
+const allElements = document.getElementsByTagName("*");
+// console.log(allElements);
+
+// * can be called on specific element
+const div = document.querySelector('div');
+// const divParagraph = div.getElementsByTagName('p');
+// console.log(divParagraph.length);
+
+
+// *** querySelector (modern & Most Used)
+// Returns FIRST matching element or null
+const intro  = document.querySelector('.intro');
+const container  = document.querySelector('.container');
+// console.log(container)
+const firstItem  = document.querySelector('.item');
+// console.log(firstItem);
+
+
+// CSS selectors - very powerful!
+const activeItem  = document.querySelector('.item.active');
+// console.log(activeItem);
+// * Child selector
+const firstLi = document.querySelector('ul > li');
+const containerP = document.querySelector('.container > p');
+// console.log(containerP);
+
+
+//  Pseudo-selectors
+
+const firstChild = document.querySelector('li:first-child');
+const lastChild = document.querySelector('li:last-child');
+const nthChild = document.querySelector('li:nth-child(2)');
+// console.log(nthChild);
+
+
+
+
+//  Inserting Elements (Advanced).
+const list  = document.getElementById('list');
+const item2  = document.getElementById('item2');
+const item1  = document.createElement('li');
+item1.textContent = "Thukzinnn";
+console.log(item1);
+list.insertBefore(item1, item2);
+// list.insertBefore(item1, list.firstChild);
+// console.log(item1);
+// ** DOM Events
+
+/* DOM (Document Object Model) Events are actions or occurrences that happen in the browser, which you can respond to with JavaScript  */
+
+
+/* 
+    * -> Mouse Events: click, dblclick, mouseover, mouseout, mousemove
+    * -> Keyboard Events: keydown, keyup, keypress
+    * -> Form Events: submit, change, focus, blur, input
+    * -> Window Events: load, resize, scroll, unload
+
+*/
+
+const input = document.getElementById('input');
+const btn = document.getElementById('btn');
+
+btn.addEventListener('click', (e) => console.log('Click'));
+btn.addEventListener('dblclick', (e) => console.log('double click'));
+btn.addEventListener('mousedown', (e) => console.log('mouse button down'));
+btn.addEventListener('mouseup', (e) => console.log('mouse button up'));
+btn.addEventListener('mouseenter', (e) => console.log('mouse enter'));
+btn.addEventListener('mouseleave', (e) => console.log('mouse leave'));
+btn.addEventListener('mouseover', (e) => console.log('mouse over'));
+btn.addEventListener('mouseout', (e) => console.log('mouse out'));
+btn.addEventListener('mousemove', (e) => console.log('mouse moving'));
