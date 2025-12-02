@@ -1085,7 +1085,7 @@ item1.textContent = "Thukzinnn";
 const input = document.getElementById('input');
 const btn = document.getElementById('btn');
 
-btn.addEventListener('click', (e) => console.log('Click'));
+// btn.addEventListener('click', (e) => console.log('Click'));
 // btn.addEventListener('dblclick', (e) => console.log('double click'));
 // btn.addEventListener('mousedown', (e) => console.log('mouse button down'));
 // btn.addEventListener('mouseup', (e) => console.log('mouse button up'));
