@@ -1069,55 +1069,5 @@ class Person{
 // list.insertBefore(item1, item2);
 // list.insertBefore(item1, list.firstChild);
 // console.log(item1);
-// ** DOM Events
-
-/* DOM (Document Object Model) Events are actions or occurrences that happen in the browser, which you can respond to with JavaScript  */
-
-
-/* 
-    * -> Mouse Events: click, dblclick, mouseover, mouseout, mousemove
-    * -> Keyboard Events: keydown, keyup, keypress
-    * -> Form Events: submit, change, focus, blur, input
-    * -> Window Events: load, resize, scroll, unload
-
-*/
-
-const input = document.getElementById('input');
-const btn = document.getElementById('btn');
-
-// btn.addEventListener('click', (e) => console.log('Click'));
-// btn.addEventListener('dblclick', (e) => console.log('double click'));
-// btn.addEventListener('mousedown', (e) => console.log('mouse button down'));
-// btn.addEventListener('mouseup', (e) => console.log('mouse button up'));
-// btn.addEventListener('mouseenter', (e) => console.log('mouse enter'));
-// btn.addEventListener('mouseleave', (e) => console.log('mouse leave'));
-// btn.addEventListener('mouseover', (e) => console.log('mouse over'));
-// btn.addEventListener('mouseout', (e) => console.log('mouse out'));
-// btn.addEventListener('mousemove', (e) => console.log('mouse moving'));
-
-// const form = document.querySelector('form');
-// form.addEventListener('submit', (e) => {
-//         e.preventDefault();
-//         console.log("Form submitted")
-// });
-
-const box = document.getElementById("colorBox");
-box.addEventListener("mouseover", function(event){
-        // Log event properties.
-        // console.log("Event type: ", event.type);
-        // console.log("event.target:", event.target);
-        // console.log("event.currentTarget: ", event.currentTarget);
-
-
-// * coordinates of the mouse pointer relative to the browser's viewpoint (the visible part of the window)
-        
-console.log("clientX, clientY: ", event.clientX, event.clientY);
-
-// * coordinates of the muse pointer relative to the document/page(includes: scrolling).
-console.log("pageX, pageY:", event.pageX, event.pageY);
-
-// *
-
-});
 
 
