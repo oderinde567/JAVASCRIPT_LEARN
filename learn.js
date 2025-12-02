@@ -1065,8 +1065,8 @@ const list  = document.getElementById('list');
 const item2  = document.getElementById('item2');
 const item1  = document.createElement('li');
 item1.textContent = "Thukzinnn";
-console.log(item1);
-list.insertBefore(item1, item2);
+// console.log(item1);
+// list.insertBefore(item1, item2);
 // list.insertBefore(item1, list.firstChild);
 // console.log(item1);
 // ** DOM Events
@@ -1086,11 +1086,17 @@ const input = document.getElementById('input');
 const btn = document.getElementById('btn');
 
 btn.addEventListener('click', (e) => console.log('Click'));
-btn.addEventListener('dblclick', (e) => console.log('double click'));
-btn.addEventListener('mousedown', (e) => console.log('mouse button down'));
-btn.addEventListener('mouseup', (e) => console.log('mouse button up'));
-btn.addEventListener('mouseenter', (e) => console.log('mouse enter'));
-btn.addEventListener('mouseleave', (e) => console.log('mouse leave'));
-btn.addEventListener('mouseover', (e) => console.log('mouse over'));
-btn.addEventListener('mouseout', (e) => console.log('mouse out'));
-btn.addEventListener('mousemove', (e) => console.log('mouse moving'));
+// btn.addEventListener('dblclick', (e) => console.log('double click'));
+// btn.addEventListener('mousedown', (e) => console.log('mouse button down'));
+// btn.addEventListener('mouseup', (e) => console.log('mouse button up'));
+// btn.addEventListener('mouseenter', (e) => console.log('mouse enter'));
+// btn.addEventListener('mouseleave', (e) => console.log('mouse leave'));
+// btn.addEventListener('mouseover', (e) => console.log('mouse over'));
+// btn.addEventListener('mouseout', (e) => console.log('mouse out'));
+// btn.addEventListener('mousemove', (e) => console.log('mouse moving'));
+
+const form = document.querySelector('form');
+form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        console.log("Form submitted")
+});
