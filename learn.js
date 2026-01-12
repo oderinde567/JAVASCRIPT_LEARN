@@ -1022,11 +1022,11 @@ class Person{
 // const paragraphs = document.getElementsByTagName('p');
 // console.log(paragraphs.length);
 
-* Get all elements
+// * Get all elements
 // const allElements = document.getElementsByTagName("*");
 // console.log(allElements);
 
-* can be called on specific element
+// * can be called on specific element
 // const div = document.querySelector('div');
 // const divParagraph = div.getElementsByTagName('p');
 // console.log(divParagraph.length);
